@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AccessShieldFeedback.styles.css" asp-append-version="true" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-800 to-black text-white min-h-screen flex flex-col items-center">
+
+    <header class="text-center py-10">
+        <h1 class="text-4xl font-bold uppercase">DevLands Feedback</h1>
+        <p class="text-lg text-gray-300 mt-2">Help us improve the building's security!</p>
+    </header>
+
+    <main class="w-full max-w-2xl px-4">
+        <section class="bg-white text-gray-900 p-6 rounded-2xl shadow-xl mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Leave feedback</h2>
+
+            <label class="block mb-2 font-medium" for="name">Full Name</label>
+            <input type="text" id="name" class="w-full p-3 rounded border border-gray-300 mb-4" placeholder="Ex: John Smith" />
+
+            <label class="block mb-2 font-medium" for="address">Address</label>
+            <input type="text" id="address" class="w-full p-3 rounded border border-gray-300 mb-4" placeholder="Ex: john.smith97@gmail.com" />
+
+            <label class="block mb-2 font-medium" for="message">Feedback</label>
+            <textarea id="message" class="w-full p-3 rounded border border-gray-300 mb-4" rows="4" placeholder="Write your feedback message here..."></textarea>
+
+            <div class="flex items-center gap-2 mb-4" id="stars">
+                <!-- stele generate din JS -->
+            </div>
+
+            <button id="submit" class="bg-purple-700 hover:bg-purple-800 text-white font-semibold px-6 py-2 rounded transition">
+                Send
+            </button>
+
+            <div id="responseMessage" class="mt-4 text-sm font-medium"></div>
+        </section>
+
+        <section class="bg-white text-gray-900 p-6 rounded-2xl shadow-xl">
+            <h2 class="text-2xl font-semibold mb-4">Recent Feedbacks</h2>
+            <div id="feedback-list" class="space-y-4"></div>
+        </section>
+        @RenderBody()
+    </main>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

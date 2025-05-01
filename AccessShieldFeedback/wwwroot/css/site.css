@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #7a2cc1, #4b007b);
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+main {
+    width: 100%;
+    max-width: 700px;
+}
+
+section {
+    background: #1c1c1c;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #c9a2ff;
+    margin-bottom: 20px;
+}
+
+#user-name,
+#feedback-text {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #333;
+    color: #e0e0e0;
+}
+
+#star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.star {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.2s, transform 0.2s;
+}
+
+    .star:hover,
+    .star.selected {
+        color: #fbd300;
+        transform: scale(1.2);
+    }
+
+#submit-feedback {
+    background-color: #5c15d6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    #submit-feedback:hover {
+        background-color: #38007c;
+    }
+
+#feedback-message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.feedback-item {
+    padding: 15px;
+    background: #2b2b2b;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #c9a2ff;
+}
+
+    .feedback-item h3 {
+        color: #c9a2ff;
+        margin-bottom: 5px;
+    }
+
+    .feedback-item .rating {
+        color: #fbd300;
+    }
+
+footer {
+    margin-top: 30px;
+    color: white;
+}
+
+.text-nicier {
+    color: #599d97;
+    font-weight: bold;
+    margin-left: 50%;
+}
